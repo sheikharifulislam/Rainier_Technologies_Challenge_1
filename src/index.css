@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .custom-scroll-bar::-webkit-scrollbar {
+        @apply w-[6px];
+    }
+    .custom-scroll-bar::-webkit-scrollbar-track {
+        @apply rounded bg-gray-100;
+    }
+    .custom-scroll-bar::-webkit-scrollbar-thumb {
+        @apply rounded bg-gray-300;
+    }
+}

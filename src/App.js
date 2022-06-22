@@ -1,13 +1,26 @@
+import axios from "axios";
+import { useEffect, useState } from "react";
 import Cart from "./components/cart/Cart";
 import DashboardHeader from "./components/dashboard header/DashboardHeader";
 import Products from "./components/products/Products";
 
 function App() {
+    const [products, setproducts] = useState([]);
+    useEffect(() => {
+        axios
+            .get("https://fec-inventory-api.herokuapp.com/product-info")
+            .then((response) => {
+                setproducts(response.data);
+            })
+            .catch((error) => {
+                console.log(error.message);
+            });
+    }, []);
     return (
-        <section className="container my-3 px-4">
+        <section className="container flex h-screen flex-col justify-between overflow-hidden px-4">
             <DashboardHeader />
-            <div className="mt-6 flex justify-between">
-                <Products />
+            <div className="flex h-full flex-1 justify-between border border-red-700">
+                <Products products={products} />
                 <Cart />
             </div>
         </section>
