@@ -19,7 +19,7 @@ function App() {
     return (
         <section className="container flex h-screen flex-col justify-between overflow-hidden px-4">
             <DashboardHeader />
-            <div className="flex h-full flex-1 justify-between border border-red-700">
+            <div className="flex h-full flex-1 justify-between">
                 <Products products={products} />
                 <Cart />
             </div>
