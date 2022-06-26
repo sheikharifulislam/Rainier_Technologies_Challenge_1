@@ -46,3 +46,9 @@ export const changeQuantity = (dispatch, index, value) => {
         },
     });
 };
+
+export const clearCart = (dispatch) => {
+    return dispatch({
+        type: "Clear",
+    });
+};

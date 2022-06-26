@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import { addToCart } from "../../../actions/actions";
-import { CartDispatchContext } from "../../../contexts/CartProvider";
+import { addToCart } from "../../../../actions/actions";
+import { CartDispatchContext } from "../../../../contexts/CartProvider";
 
 const SingleProduct = ({ product }) => {
     const dispatch = useContext(CartDispatchContext);

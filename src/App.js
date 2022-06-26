@@ -1,8 +1,8 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import Cart from "./components/cart/Cart";
-import DashboardHeader from "./components/dashboard header/DashboardHeader";
-import Products from "./components/products/Products";
+import Cart from "./components/main/cart//Cart";
+import DashboardHeader from "./components/main/dashboard header/DashboardHeader";
+import Products from "./components/main/products/Products";
 import CartProvider from "./contexts/CartProvider";
 
 function App() {

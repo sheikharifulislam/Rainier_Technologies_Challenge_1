@@ -89,8 +89,11 @@ const DashboardHeader = () => {
                     </div>
                 ))}
                 <div className="flex items-center gap-2">
-                    {bookmarks.filter(Boolean).map((bookmark) => (
-                        <h1 className="flex items-center gap-2 rounded border bg-white p-2 text-xs">
+                    {bookmarks.filter(Boolean).map((bookmark, index) => (
+                        <h1
+                            className="flex items-center gap-2 rounded border bg-white p-2 text-xs"
+                            key={index}
+                        >
                             {bookmark}{" "}
                             <BsX
                                 className="h-4 w-4 cursor-pointer"

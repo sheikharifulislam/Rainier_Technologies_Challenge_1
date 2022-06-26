@@ -20,7 +20,10 @@ const reducer = (state, action) => {
             return [...state];
         case "Remove":
             state.splice(action.playload.index, 1);
+            console.log(state);
             return [...state];
+        case "Clear":
+            return [];
 
         default:
             return [...state];
