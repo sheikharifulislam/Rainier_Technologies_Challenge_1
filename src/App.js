@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import Cart from "./components/cart/Cart";
 import DashboardHeader from "./components/dashboard header/DashboardHeader";
 import Products from "./components/products/Products";
+import CartProvider from "./contexts/CartProvider";
 
 function App() {
     const [products, setproducts] = useState([]);
@@ -17,13 +18,15 @@ function App() {
             });
     }, []);
     return (
-        <section className="container flex h-screen flex-col justify-between overflow-hidden px-4">
-            <DashboardHeader />
-            <div className="flex h-full flex-1 justify-between">
-                <Products products={products} />
-                <Cart />
-            </div>
-        </section>
+        <CartProvider>
+            <section className="container flex h-screen flex-col justify-between overflow-hidden px-4">
+                <DashboardHeader />
+                <div className="flex h-full flex-1 justify-between ">
+                    <Products products={products} />
+                    <Cart setproducts={setproducts} />
+                </div>
+            </section>
+        </CartProvider>
     );
 }
 

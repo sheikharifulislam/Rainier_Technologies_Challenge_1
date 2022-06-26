@@ -24,7 +24,7 @@ const DashboardHeader = () => {
                     className="rounded border py-2 pl-2 text-xs focus:outline-none focus:ring-1 focus:ring-[#333] focus:ring-offset-0"
                 />
                 {["Tag", "Filter"].map((item, index) => (
-                    <div class="relative ml-3" key={index}>
+                    <div className="relative ml-3" key={index}>
                         <div>
                             <button
                                 onClick={() =>
@@ -39,7 +39,7 @@ const DashboardHeader = () => {
                                     })
                                 }
                                 type="button"
-                                class="flex max-w-xs items-center gap-2 rounded border bg-white p-2 text-sm focus:outline-none focus:ring-1 focus:ring-black focus:ring-offset-0"
+                                className="flex max-w-xs items-center gap-2 rounded border bg-white p-2 text-sm focus:outline-none focus:ring-1 focus:ring-black focus:ring-offset-0"
                             >
                                 {item === "Tag" ? (
                                     <BsSliders />
@@ -51,7 +51,7 @@ const DashboardHeader = () => {
                         </div>
 
                         <div
-                            class={`${
+                            className={`${
                                 (
                                     item === "Tag"
                                         ? handleDropdown.tag
@@ -79,7 +79,7 @@ const DashboardHeader = () => {
                                             });
                                         }}
                                         key={index}
-                                        class="block px-4 py-2 text-sm text-gray-700"
+                                        className="block px-4 py-2 text-sm text-gray-700"
                                     >
                                         {item} {index + 1}
                                     </button>
